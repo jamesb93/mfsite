@@ -12,6 +12,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@sveltejs/adapter-static": "next",
     "backblaze-b2": "^1.7.0",
     "marked": "^3.0.0"
   }

@@ -1,12 +1,14 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@sveltejs/adapter-static': next
   '@sveltejs/kit': next
   backblaze-b2: ^1.7.0
   marked: ^3.0.0
   svelte: ^3.34.0
 
 dependencies:
+  '@sveltejs/adapter-static': 1.0.0-next.16
   backblaze-b2: 1.7.0
   marked: 3.0.0
 
@@ -23,6 +25,10 @@ packages:
       estree-walker: 2.0.2
       picomatch: 2.3.0
     dev: true
+
+  /@sveltejs/adapter-static/1.0.0-next.16:
+    resolution: {integrity: sha512-xGFcg+GHF0BL1fyWx2vCzlYj4S4R+Od9cF00soo1TVp/scGOi1G9grSYYW4x5H+iDn1sscoJ65OGBGWIcOgrXg==}
+    dev: false
 
   /@sveltejs/kit/1.0.0-next.151_svelte@3.42.1:
     resolution: {integrity: sha512-dioqHt4XxqiZ+5dEL6hFG1fBuVMc5t9l9bmvUeJX6neyut432IcVLdl4t3utmD10Lu8fbybJPRkHy1PVAbHWwQ==}
