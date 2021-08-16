@@ -1,0 +1,30 @@
+{
+    "archive": [
+        {
+            "title": "Intersymmetric",
+            "date": "13-08-2021",
+            "text": [
+                "\n",
+                "This is a blurb about intersymmetric.\n",
+                "\n",
+                "Here is some more blurb.\n",
+                "\n",
+                "Below this you will see the images.\n"
+            ],
+            "assets": [
+                "/archive/intersymmetric/myimage.jpg"
+            ]
+        },
+        {
+            "title": "My lovely fake project",
+            "date": "4-01-1382",
+            "text": [
+                "\n",
+                "Fake project is awesome\n",
+                "\n",
+                "Below you will see nothing ideally\n"
+            ],
+            "assets": []
+        }
+    ]
+}
