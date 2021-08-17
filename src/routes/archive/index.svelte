@@ -1,6 +1,5 @@
 <script>
     import { archive } from '$lib/app';
-    import marked from 'marked'
 
     let allTags = [];
     let selectedTags = [];
@@ -33,12 +32,12 @@
     <input type='text' id='search-bar'/>
     <div class="tag-selector">
         {#each allTags as tag}
-        <div 
+        <button
         class:tag-select={selectedTags.includes(tag)}
         on:click={() => toggleTag(tag)} 
         class='tag'>
         {tag}
-        </div> 
+        </button> 
         {/each}
     </div>
 </div>
@@ -57,6 +56,7 @@
 
 <style>
     .search {
+        max-width: 100%;
     }
     .project-area {
     }
@@ -66,6 +66,7 @@
     .tag-selector {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         gap: 3px;
     }
 
