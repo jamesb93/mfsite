@@ -12,9 +12,7 @@
     import marked from 'marked';
     export let slug;
     
-    let project = $archive.filter(p => {
-        return p.title === slug;
-    })[0]
+    let project = $archive.filter(p => p.title === slug)[0]
 </script>
 
 <div>
