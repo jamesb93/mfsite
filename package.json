@@ -2,8 +2,9 @@
   "name": "~TODO~",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
+    "archive" : "python3 archive.py",
+    "dev": "pnpm run archive && svelte-kit dev",
+    "build": "pnpm run archive && svelte-kit build",
     "preview": "svelte-kit preview"
   },
   "devDependencies": {
