@@ -1,9 +1,12 @@
 <script>
     import { archive } from '$lib/app';
+    import { fade } from 'svelte/transition';
+    import stringSimilarity from "string-similarity";
 
     let allTags = [];
     let selectedTags = [];
     let filteredProjects = [];
+    let searchTerm = ''
     $archive.forEach(d => d.tags.forEach(tag => allTags.push(tag)))
 
     $: if (selectedTags.length === 0) {
@@ -24,12 +27,29 @@
         selectedTags = selectedTags; // Svelte Reactivity???
     }
 
+    function updateSearch() {
+        filteredProjects.forEach(d => {
+            const comparator = d.title.replace(/[^a-zA-Z]+/g, '').toLowerCase();
+            d['dist'] = stringSimilarity.compareTwoStrings(searchTerm.toLowerCase(), comparator)
+        })
+
+        filteredProjects.sort((a, b) => a.dist - b.dist);
+        filteredProjects = filteredProjects.reverse();
+    }
+
+
 </script>
 
 <!-- https://svelte-tags-input.vercel.app/#installation -->
 <!-- https://svelte.dev/repl/129f603083664aab9e5d10fe867745e2?version=3.42.1 -->
 <div class='search'>
-    <input type='text' id='search-bar'/>
+    <input 
+    placeholder='enter search term here'
+    type='text' 
+    id='search-bar' 
+    bind:value={searchTerm} 
+    on:input={updateSearch}
+    />
     <div class="tag-selector">
         {#each allTags as tag}
         <button
@@ -44,7 +64,7 @@
 
 <div class="project-area">
     {#each filteredProjects as project}
-    <div class="project">
+    <div class="project" transition:fade={{duration: 80}}>
         <h1><a href='archive/{project.title}'>{project.title}</a></h1>
         <h2>{project.date}</h2>
         <div class='project-tags'>
@@ -88,9 +108,5 @@
 
     .tag:active {
         background: rgb(196, 196, 196);
-    }
-
-    .project-image {
-        width: 200px;
     }
 </style>
