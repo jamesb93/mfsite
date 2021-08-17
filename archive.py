@@ -1,24 +1,11 @@
 from pathlib import Path
 import json
+import frontmatter
 
 static = Path('static') / Path('archive')
 
 raw_archive = [x for x in static.rglob('*')]
 project_dirs = [x for x in static.rglob('*') if x.is_dir()]
-
-archive = {}
-
-def parse_md(txt:str):
-    md = {}
-    for line in txt:
-        if line.startswith('title:'):
-            md['title'] = line.split(':', 1)[1].lstrip().rstrip()
-        elif line.startswith('date:'):
-            md['date'] = line.split(':', 1)[1].lstrip().rstrip()
-
-    blurb = [x for x in txt if not x.startswith('title:') and not x.startswith('date:')]
-    md['text'] = blurb
-    return md
 
 archive = []
 
@@ -27,7 +14,11 @@ for project in project_dirs:
 
     index = project / Path('index.md')
     with open(index, 'r') as f:
-        project_data = parse_md(f.readlines())
+        d = frontmatter.load(f)
+        project_data['title'] = d.metadata['title']
+        project_data['date'] = d.metadata['date']
+        project_data['tags'] = d.metadata['tags']
+        project_data['text'] = d.content
         project_data['assets'] = []
     # Get assets
     for x in project.rglob('*'):
@@ -37,6 +28,7 @@ for project in project_dirs:
             )
     archive.append(project_data)
 
+print(archive)
 with open('static/archive.json', 'w') as f:
     json.dump(
         {'archive' : archive},
