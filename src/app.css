@@ -1,9 +1,17 @@
+:root {
+	--font: "Lucida Grande", "Helvetica", -apple-system, BlinkMacSystemFont, "Fira Sans", "Droid Sans", Arial, sans-serif;
+}
+
 html {
-	font-family: "Helvetica", -apple-system, BlinkMacSystemFont, "Fira Sans", "Droid Sans", Arial, sans-serif;
+	font-family: var(--font);
 	font-size: 1rem;
 	line-height: 1.65em;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	box-sizing: border-box;
+}
+
+button {
+	font-family: var(--font);
 }
