@@ -1,3 +1,3 @@
 WELCOME
 
-<a href='archive'></a>
+<a href='archive'>go to archive</a>
