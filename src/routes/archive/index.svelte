@@ -57,17 +57,10 @@
 
 <style>
     .search {
-        margin: 0 auto;
-        width: 50%;
     }
     .project-area {
-        display: grid;
-        flex-direction: column;
-        margin: 0 auto;
-        width: 50%;
     }
     .project {
-
     }
 
     .tag-selector {
