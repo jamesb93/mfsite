@@ -5,12 +5,14 @@ specifiers:
   '@sveltejs/kit': next
   backblaze-b2: ^1.7.0
   marked: ^3.0.0
-  svelte: ^3.34.0
+  string-similarity: ^4.0.4
+  svelte: ^3.42.1
 
 dependencies:
   '@sveltejs/adapter-static': 1.0.0-next.16
   backblaze-b2: 1.7.0
   marked: 3.0.0
+  string-similarity: 4.0.4
 
 devDependencies:
   '@sveltejs/kit': 1.0.0-next.151_svelte@3.42.1
@@ -253,6 +255,10 @@ packages:
   /sourcemap-codec/1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
     dev: true
+
+  /string-similarity/4.0.4:
+    resolution: {integrity: sha512-/q/8Q4Bl4ZKAPjj8WerIBJWALKkaPRfrvhfF8k/B23i4nzrlRj2/go1m90In7nG/3XDSbOo0+pu6RvCTM9RGMQ==}
+    dev: false
 
   /svelte-hmr/0.14.7_svelte@3.42.1:
     resolution: {integrity: sha512-pDrzgcWSoMaK6AJkBWkmgIsecW0GChxYZSZieIYfCP0v2oPyx2CYU/zm7TBIcjLVUPP714WxmViE9Thht4etog==}
