@@ -5,7 +5,7 @@
     "archive" : "python3 archive.py",
     "dev": "pnpm run archive && svelte-kit dev",
     "build": "pnpm run archive && svelte-kit build",
-    "publish" : "pip install python-frontmatter && python3 archive.py && yarn && yarn run build",
+    "publish" : "pip install python-frontmatter && python3 archive.py && yarn && svelte-kit build",
     "preview": "svelte-kit preview"
   },
   "devDependencies": {
