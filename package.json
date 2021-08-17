@@ -2,20 +2,21 @@
   "name": "~TODO~",
   "version": "0.0.1",
   "scripts": {
-    "archive" : "python3 archive.py",
+    "archive": "python3 archive.py",
     "dev": "pnpm run archive && svelte-kit dev",
     "build": "pnpm run archive && svelte-kit build",
-    "publish" : "pip install python-frontmatter && python3 archive.py && yarn && svelte-kit build",
+    "publish": "pip install python-frontmatter && python3 archive.py && yarn && svelte-kit build",
     "preview": "svelte-kit preview"
   },
   "devDependencies": {
     "@sveltejs/kit": "next",
-    "svelte": "^3.34.0"
+    "svelte": "^3.42.1"
   },
   "type": "module",
   "dependencies": {
     "@sveltejs/adapter-static": "next",
     "backblaze-b2": "^1.7.0",
-    "marked": "^3.0.0"
+    "marked": "^3.0.0",
+    "string-similarity": "^4.0.4"
   }
 }
