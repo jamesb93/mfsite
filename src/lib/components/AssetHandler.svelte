@@ -8,7 +8,7 @@
     {#each assets as asset}
     <!-- IF IMAGE -->
     {#if images.includes(asset.split('.').pop())}
-    <img src={asset} />
+    <img loading='lazy' src={asset} />
     {/if}
     
     {#if videos.includes(asset.split('.').pop())}
@@ -20,11 +20,10 @@
     .asset-box {
         display: flex;
         flex-direction: row;
-        max-width: 60%;
         flex-wrap: wrap;
         gap: 10px;
     }
     img {
-        max-width: 45%;
+        max-width: 100%
     }
 </style>
