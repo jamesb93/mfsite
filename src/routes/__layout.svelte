@@ -4,15 +4,16 @@
 
 <main class='container'>
     <div class='left'></div>
-    <div class='center'><slot/></div>
+    <div class='center'>
+    <slot/>
+    </div>
     <div class='right'></div>
 </main>
 
 <style>
 	.container {
 		display: grid;
-		justify-content: center;
-		gap: 90px;
+		gap: 20px;
 	}
 
     .left {
@@ -37,9 +38,7 @@
     }
     @media (max-width: 1200px) {
         .container {
-			justify-content:start;
-			gap: 0px;
-			grid-template-rows: auto auto;
+			grid-template-rows: auto min(80ch, 100%);
             grid-template-areas:
             "left"
             "center"
