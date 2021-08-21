@@ -17,7 +17,7 @@ for project in project_dirs:
         d = frontmatter.load(f)
         project_data['title'] = d.metadata['title']
         project_data['date'] = d.metadata['date']
-        project_data['tags'] = d.metadata['tags']
+        project_data['tags'] = [x.lstrip().rstrip() for x in d.metadata['tags'].split(',')]
         project_data['text'] = d.content
         project_data['assets'] = []
     # Get assets
