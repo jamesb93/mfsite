@@ -1,10 +1,8 @@
 ---
 title: Intersymmetric
 date: 13-08-2021
-tags:
-    - web-based
-    - sequencer
-    - collaborative
+tags: web-based, sequencer, collaborative
+categories: installation, performance
 ---
 
 This is a blurb about intersymmetric.

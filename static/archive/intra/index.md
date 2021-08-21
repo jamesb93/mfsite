@@ -1,8 +1,8 @@
 ---
 title: INTRA
 date: 13-08-2018
-tags: 
-    - album
+tags: acoustic instruments
+categories: performance, piece
 ---
 
 INTRA - from the latin 'within' - is a series of 10 compositions by Mark Fell for the "Sixxen" microtonal metallophones designed by Xenakis https://en.wikipedia.org/wiki/Pl%C3%A9%C3%AFades and performed by Drumming Grupo de percussão http://www.drumming.pt/
