@@ -1,5 +1,5 @@
 :root {
-	--font: "Lucida Grande", "Helvetica", -apple-system, BlinkMacSystemFont, "Fira Sans", "Droid Sans", Arial, sans-serif;
+	--font: "Helvetica", -apple-system, BlinkMacSystemFont, "Fira Sans", "Droid Sans", Arial, sans-serif;
 }
 
 html {
@@ -14,4 +14,16 @@ html {
 
 button {
 	font-family: var(--font);
+}
+
+h1 {
+	font-size: 1.5rem;
+}
+
+h2 {
+	font-size: 1.25rem;
+}
+
+p {
+	font-size: 1rem;
 }
